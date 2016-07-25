@@ -1,0 +1,4 @@
+rootProject.name = 'Microservices'
+include ':ConfigServer'
+
+project(':ConfigServer').projectDir = "$rootDir/ConfigServer" as File

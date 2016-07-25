@@ -1,0 +1,18 @@
+allprojects {
+    group = 'Microservices'
+}
+
+subprojects {
+
+    buildscript {
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+        }
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
+    }
+
+
+}

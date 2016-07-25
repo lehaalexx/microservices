@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+ext {
+    springCloud = "1.1.2.RELEASE"
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.cloud:spring-cloud-config-server:$springCloud"
+    compile "org.springframework.cloud:spring-cloud-starter-eureka:$springCloud"
+    compile 'org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE'
+}
