@@ -5,6 +5,7 @@ allprojects {
 ext {
     gradlePlugin = "1.2.5.RELEASE"
     springCloud = "1.1.2.RELEASE"
+    springBoot = "1.3.5.RELEASE"
 }
 
 subprojects {
