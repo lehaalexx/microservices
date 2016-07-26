@@ -1,6 +1,8 @@
 rootProject.name = 'Microservices'
 include ':ConfigServer'
 include ':registry'
+include ':authService'
 
 project(':ConfigServer').projectDir = "$rootDir/ConfigServer" as File
 project(':registry').projectDir = "$rootDir/registry" as File
+project(':authService').projectDir = "$rootDir/authService" as File
