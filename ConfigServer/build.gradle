@@ -8,8 +8,6 @@ buildscript {
     }
 }
 
-
-apply plugin: 'spring-boot'
 apply plugin: "io.spring.dependency-management"
 
 apply plugin: 'java'

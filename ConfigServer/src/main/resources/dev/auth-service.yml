@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      username: user
+      password: pass
+#      ${MONGODB_PASSWORD}
+      database: micro
+      port: 27017
+
+server:
+  context-path: /uaa
+  port: 5000
