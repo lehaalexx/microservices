@@ -2,7 +2,8 @@ security:
   oauth2:
     client:
       clientId: account-service
-      clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
+      clientSecret: pass
+#      ${ACCOUNT_SERVICE_PASSWORD}
       accessTokenUri: http://localhost:6000/uaa/oauth/token
       grant-type: client_credentials
       scope: server
@@ -12,7 +13,8 @@ spring:
     mongodb:
       host: 127.0.0.1
       username: user
-      password: ${MONGODB_PASSWORD}
+      password: pass
+#      ${MONGODB_PASSWORD}
       database: micro
       port: 27017
 
