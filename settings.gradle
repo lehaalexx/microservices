@@ -3,8 +3,10 @@ include ':ConfigServer'
 include ':registry'
 include ':auth-service'
 include ':gateway'
+include ':account-service'
 
 project(':ConfigServer').projectDir = "$rootDir/ConfigServer" as File
 project(':registry').projectDir = "$rootDir/registry" as File
 project(':auth-service').projectDir = "$rootDir/auth-service" as File
 project(':gateway').projectDir = "$rootDir/gateway" as File
+project(':account-service').projectDir = "$rootDir/account-service" as File
