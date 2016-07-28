@@ -6,7 +6,7 @@ spring:
       uri: http://localhost:8888
       fail-fast: true
       password: pass
-#      ${CONFIG_SERVICE_PASSWORD}
+#      password: ${CONFIG_SERVICE_PASSWORD}
       username: user
 
 eureka:

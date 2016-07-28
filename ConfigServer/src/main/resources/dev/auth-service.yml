@@ -4,7 +4,7 @@ spring:
       host: localhost
       username: user
       password: pass
-#      ${MONGODB_PASSWORD}
+#     password: ${MONGODB_PASSWORD}
       database: micro
       port: 27017
 
