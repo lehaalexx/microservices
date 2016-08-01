@@ -11,8 +11,26 @@ buildscript {
 apply plugin: 'spring-boot'
 apply plugin: "io.spring.dependency-management"
 
+//Metrics
+apply plugin: "jacoco"
+apply plugin: "findbugs"
+apply plugin: "pmd"
+apply plugin: 'checkstyle'
+
 ext {
 
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+
+compileJava {
+    sourceCompatibility = '1.8'
 }
 
 configurations {
@@ -45,4 +63,15 @@ dependencies {
     testCompile "org.springframework.boot:spring-boot-starter-test"
     testCompile "de.flapdoodle.embed:de.flapdoodle.embed.mongo:1.50.3"
     testCompile "com.jayway.jsonpath:json-path:2.2.0"
+}
+
+checkstyle {
+    configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    toolVersion = '6.1.1'
+}
+
+findbugs {
+    excludeFilter = file("$project.rootDir/config/findbug/findBugExcludeFilter.xml")
+    sourceSets = [sourceSets.main]
+    ignoreFailures = true
 }
