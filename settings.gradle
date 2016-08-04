@@ -1,12 +1,12 @@
 rootProject.name = 'Microservices'
-include ':ConfigServer'
+include ':config'
 include ':registry'
 include ':auth-service'
 include ':gateway'
 include ':account-service'
 include ':monitoring'
 
-project(':ConfigServer').projectDir = "$rootDir/ConfigServer" as File
+project(':config').projectDir = "$rootDir/ConfigServer" as File
 project(':registry').projectDir = "$rootDir/registry" as File
 project(':auth-service').projectDir = "$rootDir/auth-service" as File
 project(':gateway').projectDir = "$rootDir/gateway" as File
